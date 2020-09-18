@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'homepage/css/style.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,900;1,300;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="header">
+    <div class="container" style="background-image: url('static/homepage/images/1.jpg')">
+        <div class="navbar">
+            <div class="logo">
+
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Signup/Login</a></li>
+
+
+                </ul>
+            </nav>
+
+            <a href="{%url 'cart'%}"><img src="{% static 'homepage/images/cart.png' %}" width="30px" height="30px"></a>
+            <img src="{% static 'homepage/images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<!--------------  featured Categories ----------------->
+
+<div class="categories">
+
+    <div class="small-container">
+
+        <div class="row">
+            <div class="col-3">
+                <img src="{% static 'homepage/images/category-1.jpg' %}">
+            </div>
+
+            <div class="col-3">
+                <img src="{% static 'homepage/images/category-2.jpg' %}">
+            </div>
+            <div class="col-3">
+                <img src="{% static 'homepage/images/category-3.jpg' %}">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!--------------  featured products ----------------->
+
+<div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-1.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-2.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-3.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-4.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+
+    </div>
+
+
+    <h2 class="title">Latest Products</h2>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-5.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-6.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-7.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-8.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-9.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-10.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-11.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+
+            <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="{% static 'homepage/images/product-12.jpg' %}">
+            <h4>Red Printed T-Shirt</h4>
+            <p>$50.00</p>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!--------------------Offer----------------------->
+
+<div class="Offer">
+    <div class="small-container">
+        <div class="row">
+
+            <div class="col-2">
+                <img src="{% static 'homepage/images/exclusive.png' %}" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available on our website</p>
+                <h1>Smart Band 4</h1>
+                <small>The Mi Smart Band 4 features a 39.9% larger(than Mi Band 3) AMOLED color full-touch display with
+                    adjustable brightness, so everyting is clear as can be.</small>
+
+                <a href="" class="btn">Buy Now &#8594;</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-------------------Footer------------------>
+
+<div class="footer">
+
+    <div class="small-container">
+
+        <div class="row">
+
+            <div class="footer-col-1">
+
+            </div>
+
+            <div class="footer-col-2">
+
+            </div>
+
+            <div class="footer-col-3">
+
+            </div>
+
+            <div class="footer-col-4">
+
+            </div>
+
+
+        </div>
+
+        <hr>
+
+    </div>
+</div>
+
+<!-------------------js for toggle menu----------------->
+
+
+<script>
+  
+  var MenuItems = Document.getElementById('MenuItems');
+
+  MenuItems.style.maxheight = "0px"
+  
+  function  menutoggle(){
+    if(MenuItems.style.maxheight == "0px")
+    {
+      MenuItems.style.maxheight = "200px";
+
+    }
+    else
+    {
+     MenuItems.style.maxheight = "0px";
+
+    }
+  }
+
+
+
+
+</script>
+
+</body>
+</html>

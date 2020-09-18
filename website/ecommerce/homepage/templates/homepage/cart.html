@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'homepage/css/style.css'%}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+<div class="navbar" style="padding: 30px; background-color:gray">
+    <nav>
+        <ul id="MenuItems">
+            <li><a href="{% url 'homepage'%}" style="color:#000">Home</a></li>
+            <li><a href="" style="color:#000">About</a></li>
+            <li><a href="" style="color:#000">Contact</a></li>
+            <li><a href="" style="color:#000">Signup/Login</a></li>
+        </ul>
+    </nav>
+
+    <img src="{% static 'homepage/images/cart.png' %}" width="30px" height="30px">
+    <img src="{% static 'homepage/images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+
+</div>
+</header>
+<div class="row">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="box-element">
+                <a class="btn btn-outline-dark" href="{% url 'homepage'%}">&#x2190; Continue Shopping</a>
+                <br>
+                <br>
+                <table class="table">
+                    <tr>
+                        <th><h5>Items: <strong>3</strong></h5></th>
+                        <th><h5>Total: <strong>$43</strong></h5></th>
+                        <th>
+                            <a style="float:right; margin:5px" class="btn btn-success" href="{% url 'checkout'%}">Checkout</a>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div class="box-element" style="border:1px solid black; padding:30px">
+                <div class="cart-row">
+                    <div style="flex:2"></div>
+                    <div style="flex:2"><strong>Item</strong></div>
+                    <div style="flex:1"><strong>Price</strong></div>
+                    <div style="flex:1"><strong>Quantity</strong></div>
+                    <div style="flex:1"><strong>Total</strong></div>
+
+                </div>
+                <br>
+                <br>
+                <div class="cart-row">
+                    <div style="flex:2"><img src="{%static 'homepage/images/cart.png'%}" style="width:30px; height:30px"></div>
+                    <div style="flex:2">Product 1</div>
+                    <div style="flex:1">$20</div>
+                    <div style="flex:1">
+                        <p class="quantity">2</p>
+                        <div class="quantity">
+                            <img src="{%static 'homepage/images/arrow-up.png'%}" style="height:15px; width:15px">
+                            <img src="{%static 'homepage/images/arrow-down.png'%}" style="height:15px; width:15px">
+                        </div>
+                    </div>
+                    <div style="flex:1">$32</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<style>
+    .cart-row{
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec
+}
+    .quantity{
+     display: inline-block;
+     font-weight: 700;
+     padding-right: 10px;
+    }
+</style>
+</html>
