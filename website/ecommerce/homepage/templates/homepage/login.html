@@ -4,24 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{%static 'homepage/css/signup.css'%}">
-    <title>Signup</title>
+    <title>Login</title>
 </head>
 <body>
 <div class="container">
     <form action="#" method="post">
         {% csrf_token %}
-        <h2>Sign Up</h2>
-        <input type="text" placeholder="Name"/>
+        <h2>Login</h2>
         <input type="email" placeholder="Email"/>
         <input type="password" placeholder="Password"/>
-        <input type="text" placeholder="Full address"/>
-        <input type="integer" placeholder="Phone  number"/>
-        <button value="submit">Sign Up</button>
+        <button value="submit">Login</button>
 
-        <p>Already have an account?
-            <a href="{%url 'log_user'%}" style="font-weight:bold; font-size:16px">Log In</a>
+        <p>Don't have an account?<br>
+            <a href="{%url 'sign'%}" style="font-weight:bold; font-size:16px">Create New</a>
+            <br>
             <br>
             <a href="{%url 'homepage'%}" style="font-weight:bold; font-size:16px">Back to Home</a>
+
         </p>
     </form>
 
