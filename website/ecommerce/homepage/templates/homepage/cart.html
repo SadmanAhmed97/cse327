@@ -24,20 +24,21 @@
 </head>
 <body>
 <header>
-<div class="navbar" style="padding: 30px; background-color:gray">
-    <nav>
-        <ul id="MenuItems">
-            <li><a href="{% url 'homepage'%}" style="color:#000">Home</a></li>
-            <li><a href="" style="color:#000">About</a></li>
-            <li><a href="" style="color:#000">Contact</a></li>
-            <li><a href="" style="color:#000">Signup/Login</a></li>
-        </ul>
-    </nav>
+    <div class="navbar" style="padding: 30px; background-color:gray">
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="{% url 'homepage'%}" style="color:#000">Home</a></li>
+                <li><a href="" style="color:#000">About</a></li>
+                <li><a href="" style="color:#000">Contact</a></li>
+                <li><a href="" style="color:#000">Signup/Login</a></li>
+            </ul>
+        </nav>
 
-    <img src="{% static 'homepage/images/cart.png' %}" width="30px" height="30px">
-    <img src="{% static 'homepage/images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+        <img src="{% static 'homepage/images/cart.png' %}" width="30px" height="30px">
+        <p id="cart-total" style="color:red;">{{cartItems}}</p>
+        <img src="{% static 'homepage/images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
 
-</div>
+    </div>
 </header>
 <div class="row">
     <div class="container">
@@ -70,14 +71,21 @@
                 <br>
                 {% for item in items %}
                 <div class="cart-row">
-                    <div style="flex:2"><img src="{{item.product.imageURL}}" style="width:150px; height:180px"></div>
+                    <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"
+                                             style="width:150px; height:180px"></div>
                     <div style="flex:2">{{item.product.name}}</div>
                     <div style="flex:1">{{item.product.price|floatformat:2}}</div>
                     <div style="flex:1">
                         <p class="quantity">{{item.quantity}}</p>
                         <div class="quantity">
-                            <img src="{%static 'homepage/images/arrow-up.png'%}" style="height:15px; width:15px">
-                            <img src="{%static 'homepage/images/arrow-down.png'%}" style="height:15px; width:15px">
+                            <button>
+                                <img data-product={{item.product.id}} data-action="add" class="update-cart"
+                                     src="{%static 'homepage/images/arrow-up.png' %}" style="height:15px; width:15px">
+                            </button>
+                            <button>
+                            <img data-product={{item.product.id}} data-action="remove" class="update-cart"
+                                 src="{%static 'homepage/images/arrow-down.png' %}" style="height:15px; width:15px">
+                            </button>
                         </div>
                     </div>
                     <div style="flex:1">{{item.get_total}}Tk</div>
@@ -104,5 +112,6 @@
      font-weight: 700;
      padding-right: 10px;
     }
+
 </style>
 </html>

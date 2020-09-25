@@ -12,7 +12,26 @@
     <link rel="stylesheet" type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+        function getToken(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    const csrftoken = getToken('csrftoken');
 
+    </script>
 </head>
 <body>
 
@@ -33,6 +52,7 @@
             </nav>
 
             <a href="{%url 'cart'%}"><img src="{% static 'homepage/images/cart.png' %}" width="30px" height="30px"></a>
+            <p id="cart-total" style="color:red;">{{cartItems}}</p>
             <img src="{% static 'homepage/images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
 
 
@@ -112,7 +132,7 @@
         <div class="col-4">
             <img src="{{product.imageURL}}">
             <h4>{{product.name}}</h4>
-            <button class="btn add-btn">Add to cart</button>
+            <button data-product={{product.id}} data-action="add" class="btn add-btn update-cart">Add to cart</button>
             <p style="font-weight: bold; font-size: 19px">Price:{{product.price|floatformat:1 }}Tk</p>
         </div>
         {% endfor %}
@@ -178,37 +198,6 @@
     </div>
 </div>
 
-<!-------------------js for toggle menu----------------->
-
-
-<script>
-  
-  var MenuItems = Document.getElementById('MenuItems');
-
-  MenuItems.style.maxheight = "0px"
-  
-  function  menutoggle(){
-    if(MenuItems.style.maxheight == "0px")
-    {
-      MenuItems.style.maxheight = "200px";
-
-    }
-    else
-    {
-     MenuItems.style.maxheight = "0px";
-
-    }
-  }
-
-
-
-
-
-
-
-
-
-</script>
-
+<script type="text/javascript" src="{%static 'homepage/js/cart.js'%}"></script>
 </body>
 </html>
