@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Dell.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Dell.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/homepage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/homepage/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/homepage/templates/homepage/index.html" afterDir="false" />
