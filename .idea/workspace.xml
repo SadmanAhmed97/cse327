@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38f22830-7e9f-468f-88f8-c167bcfc004f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cse327.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cse327.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/ecommerce/homepage/templates/homepage/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/ecommerce/homepage/templates/homepage/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/ecommerce/homepage/templates/homepage/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/ecommerce/homepage/templates/homepage/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/ecommerce/homepage/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/ecommerce/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/ecommerce/homepage/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
